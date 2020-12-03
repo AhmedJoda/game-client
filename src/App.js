@@ -9,7 +9,7 @@ import "./App.css";
 
 function App() {
   const [matches, setMatches] = useState([]);
-  const url = "http://localhost:1000/api/matches";
+  const url = "https://game-task-server.herokuapp.com/api/matches";
 
   useEffect(() => {
     async function getMatches() {

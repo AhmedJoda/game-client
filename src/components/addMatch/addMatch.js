@@ -5,7 +5,7 @@ import _ from "lodash"
 
 export default function AddMatch(props) {
   const [match, setMatch] = useState({});
-  const url = "http://localhost:1000/api/matches";
+  const url = "https://game-task-server.herokuapp.com/api/matches";
   const matchID = props.match.params.id;
 
   useEffect(() => {
