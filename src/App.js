@@ -20,28 +20,21 @@ function App() {
   });
 
   const deleteMatch = async (id) => {
-  
     await Axios.delete(`${url}/${id}`);
   };
 
-
-
   return (
     <Switch>
-      <Route path="/match/:id" component={AddMatch} />
       <Route
         path="/home"
         render={(props) => (
-          <Screens
-            {...props}
-            matches={matches}
-            deleteMatch={deleteMatch}
-          />
+          <Screens {...props} matches={matches} deleteMatch={deleteMatch} />
         )}
       />
+      <Route path="/match/:id" component={AddMatch} />
+
       <Route path="/not-found" component={NotFound} />
       <Redirect from="/" exact to="/home" />
-      {/* <Redirect to="/not-found" /> */}
     </Switch>
   );
 }
