@@ -25,16 +25,15 @@ function App() {
 
   return (
     <Switch>
-      <Route
-        path="/home"
+     
+      <Route path="/match/:id" component={AddMatch} />
+
+      <Route path="/not-found" component={NotFound} /> <Route
+        path="/"
         render={(props) => (
           <Screens {...props} matches={matches} deleteMatch={deleteMatch} />
         )}
       />
-      <Route path="/match/:id" component={AddMatch} />
-
-      <Route path="/not-found" component={NotFound} />
-      <Redirect from="/" exact to="/home" />
     </Switch>
   );
 }
